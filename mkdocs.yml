@@ -1,0 +1,149 @@
+# [Info]
+site_name: 统计学自学指南 # 左上角标题
+
+
+# [Navigtion] 左侧文章导航
+nav:
+  #- index.md
+  - 前言: "index.md"
+  - 一个仅供参考的学习建议: "guide.md"
+  - 数学分析(微积分):
+    - "MIT 18.01/18.02: Calculus": "analysis/mit18.01.md"
+  - 高等代数(线性代数):
+    - "MIT 18.06: Linear Algebra": "algebra/mit18.06.md"
+    - "Algebra": "algebra/ladr.md"
+  - 初等数论:
+    - "MIT 18.781: Theory Of Numbers": "number_theory/index.md"
+  - 微分方程:
+    - "MIT 18.03: Differential Equations": "ode/mit18.03.md"
+    - "MIT RES.18-009: Learn Differential Equations: Up Close With Gilbert Strang And Cleve Moler": "ode/mit18.009.md" 
+  - 矩阵数值分析:
+    - "MIT 18.065: Matrix Methods In Data Analysis, Signal Processing, And Machine Learning": "矩阵数值分析/mit18.065.md"
+    - "Stanford CS205A: Mathematical Methods for Computer Vision, Robotics, and Graphics": "矩阵数值分析/cs205a.md"
+    - "UW CSE559I: The art and science of positive definite matrices": "矩阵数值分析/cse559i.md"
+    - "MIT 18.330 : Introduction to numerical analysis": "矩阵数值分析/mit18.330.md"
+  - 概率论与随机过程:
+    - "NTHU MATH2810: Probability": "probability/math2810.md"
+    - "Yale Statistics251/551: Stochastic Process": "probability/yale251.md"
+    - "MIT 6.262:Discrete Stochastic Processes": "probability/mit6.262.md"
+    - "UIUC Math564: Applied Stochastic Processes": "probability/uiuc564.md"
+    - "UCB CS126: Probability theory": "probability/UCB-CS126.md"
+    - "MIT 6.041SC: Probabilistic Systems Analysis And Applied Probability": "probability/mit6.041.md"
+    - "Supplementary": "probability/sup.md"
+  - 高等概率论与测度论:
+    - "UA Stat571: Probability and Measure": "measure/stat571.md"
+    - "IMPA: Measure Theory": "measure/impa.md"
+    - "Supplementary": "measure/sup.md"
+  - 统计推断与数理统计:
+    - "NTHU MATH2820: Statistics": "stats/nthu2820.md"
+    - "UCB Statistics210: Theoretical Statistics": "stats/ucb210.md"
+    - "UW STAT512: Introduction to Statistical Inference": "stats/stat512.md"
+    - "Stanford Stat300: Theory of Statistics": "stats/stat300.md"
+    - "Supplementary": "stats/sup.md"
+  - 凸优化:
+    - "Stanford EE364A: Convex Optimization": "凸优化/stanford.md"
+    - "CMU Convex Optimization": "凸优化/cmu.md"
+  - 多元统计分析:
+    - "NTHU STAT5191: Applied Multivariate Analysis": "多元统计分析/stat5191.md"
+  - 机器学习:
+    - "NTU Machine Learning": "ml/ntuml.md"
+    - "Coursera: Machine Learning": "ml/coursera.md"
+    - "Stanford CS229: Machine Learning": "ml/cs229.md"
+    - "Supplementary": "ml/sup.md"
+  - 时间序列分析:
+    - "UA Stat479: Time Series Analysis": "时间序列分析/stat479.md"
+  - 离散数学与应用概率论:
+    - "UCB CS70: discrete Math and probability theory": "discrete_math/CS70.md"
+  - 信息论相关: 
+    - "MIT 6.050J: Information theory and Entropy": "信息论相关/infomation_theory_and_entropy.md"
+    - "The Information Theory, Pattern Recognition, and Neural Networks": "信息论相关/The_Information_Theory_Pattern_Recognition_and_Neural_Networks.md"
+  - 数据科学:
+    - "UCB Data100: Principles and Techniques of Data Science": "DS/Data100.md"
+    - "UCB Data 8: Foundations of Data Science": "DS/Data8.md"
+  - 实验设计与分析:
+    - "UA Stat568: Design and Analysis of Experiments": "experiment/stat568.md"
+    - "NTHU STAT5510: Experimental Design and Analysis": "experiment/stat5510.md"
+  - 线性模型:
+    - "NTHU STAT5410: Linear Models": "linear/stat5410.md"
+    - "UA Stat378: Applied Regression Analysis": "linear/stat378.md"
+    - "Yale Statistics312/612: Linear Models": "linear/yale312.md"
+
+
+# [UI]
+## [top]
+theme:
+  name: material
+  palette:
+    - scheme: default # 日间模式
+      primary: deep blue # 上方的
+      accent: blue # 链接等可交互元件的高亮色
+      toggle:
+        icon: material/weather-night # 图标
+        name: 切换至夜间模式 # 鼠标悬浮提示
+    - scheme: slate # 夜间模式
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: 切换至日间模式
+
+  features:
+    - header.autohide
+    - navigation.tracking
+    - #navigation.tabs # 使用Tab来进行分类
+    - navigation.top # 返回顶部的按钮 在上滑时出现
+    - #navigation.path #
+    - search.suggest # 搜索输入一些字母时推荐补全整个单词
+    - search.highlight # 搜索出的文章关键词加入高亮
+    - content.code.annotate
+  language: zh # 一些提示性的文字会变成中文
+  icon: # 'clound' 右上角图标的另一种样式，需要注释下行
+    repo: fontawesome/brands/github
+edit_uri: edit/main/docs # 编辑按钮跳转的链接
+
+
+    
+
+# [Extensions]
+plugins:
+  - search: # 现在还不支持中文搜索 支持之后可以设置语言
+    # insider已经支持中文的分词搜索了 https://squidfunk.github.io/mkdocs-material/blog/2022/chinese-search-support/
+      lang:
+        - en
+        - ja
+      enable_anchors: true
+  - tags # 给单篇文章添加标签 https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/?h=tags
+markdown_extensions:
+  - pymdownx.arithmatex: # latex支持
+      generic: true
+  - attr_list # 给图片后面添加{width="300"}设置大小
+  - toc:
+      permalink: true # 固定标题位置为当前位置
+  - pymdownx.highlight: # 代码块高亮
+      linenums: true # 显示行号
+      auto_title: true # 显示编程语言名称
+  - pymdownx.superfences # 代码块高亮插件
+  - meta # 支持Markdown文件上方自定义标题标签等
+  - admonition # https://squidfunk.github.io/mkdocs-material/reference/admonitions/#inline-blocks
+  - pymdownx.details # admonition需要
+  - attr_list
+  - md_in_html
+
+
+extra_javascript:
+  # latex支持
+  # check https://squidfunk.github.io/mkdocs-material/reference/mathjax/?h=math for more information
+  # notice `curl https://polyfill.io/v3/polyfill.min.js?features=es6 > docs/mkdocs/javascripts/polyfill.min.js && curl https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js > docs/mkdocs/javascripts/tex-mml-chtml.js` not works... because there are other resources that need to load
+  - attach/javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js # https://cdn.bytedance.com/?query=mathjax&version=3.2.0
+  
+extra_css:
+  # - attach/css/no-footer.css # 不使用底部的翻页
+  - attach/css/unordered-list-symbols.css # multiplt unordered list symbols
+
+google_analytics: 
+  - 'UA-35232574'
+  - 'auto'
+
+# Lastly Update by Xuankai Wang in 2023/04/05.
