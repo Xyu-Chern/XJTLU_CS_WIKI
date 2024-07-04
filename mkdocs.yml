@@ -1,5 +1,11 @@
 # [Info]
 site_name: XJTLU_CS_WIKI # 左上角标题
+site_url: https://xyu-chern.github.io/XJTLU_CS_Wiki/
+site_author: Xyu Chern
+site_description: XJTLU_ICS
+## [top-right corner]
+repo_url: https://github.com/Xyu-Chern/XJTLU_CS_WIKI # 右上角点击跳转的链接
+repo_name: XJTLU_CS_WIKI # 右上角的名字
 
 
 # [Navigtion] 左侧文章导航
@@ -7,10 +13,10 @@ nav:
   #- index.md
   - 前言: "index.md"
   - 数学分析:
-    - "MIT 18.01/18.02: Calculus": "analysis/mit18.01.md"
+    - "MIT 18.01/18.02: Calculus": "math/Analysis.md"
   - 线性代数:
-    - "MIT 18.06: Linear Algebra": "algebra/mit18.06.md"
-    - "Algebra": "algebra/ladr.md"
+    - "MIT 18.06: Linear Algebra": "math/Analysis.md"
+    - "Algebra": "math/Analysis.md"
 
 # [UI]
 ## [top]
@@ -45,8 +51,6 @@ theme:
 edit_uri: edit/main/docs # 编辑按钮跳转的链接
 
 
-    
-
 # [Extensions]
 plugins:
   - search: # 现在还不支持中文搜索 支持之后可以设置语言
@@ -72,6 +76,16 @@ markdown_extensions:
   - attr_list
   - md_in_html
 
+# [bottom-left corner]
+copyright: Copyright &copy; 2024 - present <a href="https://github.com/Xyu-Chern" target="_blank" rel="noopener noreferrer">Xyu Chern</a>
+
+## [bottom-right corner]
+extra:
+  social: # icons
+    - icon: fontawesome/brands/github
+      link: https://github.com/Xyu-Chern/XJTLU_CS_WIKI
+      name: GitHub | XJTLU_CS_WIKI
+    
 
 extra_javascript:
   # latex支持
