@@ -1,1 +1,0 @@
-[Convex Optimization (cmu.edu)](https://www.stat.cmu.edu/~ryantibs/convexopt/)
